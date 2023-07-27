@@ -47,8 +47,8 @@ public class first {
 
 
 
-//        linkedList.tail.next = linkedList.head.next;
-//        System.out.println(linkedList.loopdetected());
+        linkedList.tail.next = linkedList.head.next;
+        System.out.println(linkedList.loopdetected());
 //        System.out.println(linkedList.lengthofLoop());
 
 
