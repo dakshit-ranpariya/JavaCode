@@ -7,7 +7,7 @@ package Doubly_LinkedList;
 //19.Done   Reverse a Doubly Linked List
 //20.       Insert value in sorted way in a sorted doubly linked list
 //21.Done   Remove duplicates from a sorted doubly linked list
-//22.       Given only a pointer to a node to be deleted in a doubly linked list, delete it
+//22.Done   Given only a pointer to a node to be deleted in a doubly linked list, delete it
 //23.Done   Remove duplicates from doubly linked list
 
 
@@ -16,14 +16,17 @@ public class first {
         LinkedList linkedList = new LinkedList();
         linkedList.insert(10);
         linkedList.insert(30);
-        linkedList.insert(10);
-        linkedList.insert(20);
         linkedList.insert(40);
-        linkedList.insert(30);
-        linkedList.removeDupDoubly();
+        linkedList.insert(50);
         linkedList.print();
-//        linkedList.removeDupfromSorted();
+//        linkedList.sortedInsert(60);
+
+//        Node del = linkedList.head.next;
+//        linkedList.deleteNode(del);
+//        System.out.println();
 //        linkedList.reverseDoubly();
+//        linkedList.removeDupDoubly();
+//        linkedList.removeDupfromSorted();
 
 
 //        linkedList.findPair(1000);
@@ -178,6 +181,34 @@ class LinkedList{
                 curr = n;
             }
             n = n.next;
+        }
+    }
+
+    public void deleteNode(Node del) {
+        del.data = del.next.data;
+        del.next = del.next.next;
+
+    }
+
+    public void sortedInsert(int value) {
+        Node newNode = new Node(value);
+        Node temp = head;
+        Node prev = null;
+
+        while(temp!=null){
+            if(temp.data>value){
+                break;
+            }
+            prev = temp;
+            temp = temp.next;
+        }
+        if(prev!=null){
+            Node curr = prev.next;
+            prev.next = newNode;
+            newNode.next = curr;
+        }else{
+            newNode.next = head;
+            head = newNode;
         }
     }
 }
