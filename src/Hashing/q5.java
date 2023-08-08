@@ -1,3 +1,5 @@
+//Check if two arrays are equal or not
+
 package Hashing;
 
 import java.util.HashMap;
