@@ -1,4 +1,6 @@
 package Hashing;
+// Find whether an array is a subset of another array
+
 
 import java.util.HashSet;
 
