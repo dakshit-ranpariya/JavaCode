@@ -1,3 +1,4 @@
+// Check if pair with given Sum exists in Array
 package Hashing;
 
 import java.util.HashMap;
