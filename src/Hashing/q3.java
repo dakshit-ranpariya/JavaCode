@@ -1,3 +1,5 @@
+// Count frequency of each number in array
+
 package Hashing;
 
 import java.util.HashMap;
