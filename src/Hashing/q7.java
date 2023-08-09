@@ -7,6 +7,8 @@ import java.util.Map;
 
 public class q7 {
     public static void main(String[] args) {
+
+
         int[] arr = {1, 2, 3, 2, 3, 4, 1, 7};
 
         HashMap<Integer, Integer> hashMap = new HashMap<>();
@@ -23,6 +25,6 @@ public class q7 {
             if((int)me.getValue() < 2){
                 System.out.print(me.getKey() + " ");
             }
-        }
+//        }
     }
 }
