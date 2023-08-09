@@ -8,7 +8,7 @@ import java.util.Map;
 public class q5 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6};
-        int[] arr2 = {5, 2, 1, 3, 6};
+        int[] arr2 = {5, 2, 1, 3, 6, 6};
 
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         HashMap<Integer, Integer> hashMap2 = new HashMap<>();

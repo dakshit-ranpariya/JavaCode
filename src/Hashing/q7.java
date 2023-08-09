@@ -25,6 +25,6 @@ public class q7 {
             if((int)me.getValue() < 2){
                 System.out.print(me.getKey() + " ");
             }
-//        }
+        }
     }
 }
