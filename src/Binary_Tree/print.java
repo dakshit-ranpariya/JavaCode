@@ -1,4 +1,8 @@
 package Binary_Tree;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Node{
     int data;
     Node left, right;
@@ -17,6 +21,40 @@ class Tree{
         System.out.print(root.data + " ");
         inOrder(root.right);
     }
+
+    public void preOrder(Node root){
+        if(root == null) return;
+
+        System.out.print(root.data + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+    public void postOrder(Node root){
+        if(root == null) return;
+
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data+" ");
+    }
+
+    public void levelOrder(Node root){
+        Queue<Node> queue = new LinkedList<>();
+
+        queue.add(root);
+
+        while(!queue.isEmpty()){
+            Node newNode = queue.poll();
+            System.out.print(newNode.data + " ");
+            if(newNode.left!=null){
+                queue.add(newNode.left);
+            }
+            if(newNode.right!=null){
+                queue.add(newNode.right);
+            }
+        }
+
+    }
 }
 
 public class print {
@@ -34,7 +72,11 @@ public class print {
         nt.root.right.right.left = new Node(9);
         nt.root.right.right.right = new Node(10);
 
-        nt.inOrder(nt.root);
+//        nt.inOrder(nt.root);
+//        nt.preOrder(nt.root);
+//        nt.postOrder(nt.root);
+//        nt.levelOrder(nt.root);
     }
+
 
 }
