@@ -1,6 +1,8 @@
 package Binary_Tree;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 class Node{
@@ -29,6 +31,17 @@ class Tree{
         preOrder(root.left);
         preOrder(root.right);
     }
+    List<Integer> list = new ArrayList<>();
+    public List<Integer> inorderTraversal(Node root) {
+
+        if(root==null) return list;
+
+        inorderTraversal(root.left);
+        list.add(root.data);
+        inorderTraversal(root.right);
+
+        return list;
+    }
 
     public void postOrder(Node root){
         if(root == null) return;
@@ -55,6 +68,15 @@ class Tree{
         }
 
     }
+
+    public int maxDepth(Node root) {
+        if(root==null) return 0;
+
+        int l = maxDepth(root.left);
+        int r = maxDepth(root.right);
+
+        return Math.max(l,r)+1;
+    }
 }
 
 public class print {
@@ -72,6 +94,10 @@ public class print {
         nt.root.right.right.left = new Node(9);
         nt.root.right.right.right = new Node(10);
 
+//        List<Integer> preOrder = nt.inorderTraversal(nt.root);
+//        System.out.println(preOrder);
+
+        System.out.println(nt.maxDepth(nt.root));
 //        nt.inOrder(nt.root);
 //        nt.preOrder(nt.root);
 //        nt.postOrder(nt.root);
