@@ -2,9 +2,10 @@ package Recursion;
 // Que.: check if a number is a prime number or not using recursion
 public class q9 {
     public static void main(String[] args) {
-        System.out.println(isPrime(5));
+        System.out.println(isPrime(10));
     }
     public static boolean isPrime(int n){
+        if(n==2) return true;
         if(n<=1) return false;
 
         if(n%2==0) return false;
